@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>M</title>
+</head>
+<body>
+
+<script>
+    //先执行下载元素的任务，然后再跳转到云原神页面
+    //顺序错误会导致无法下载原神的安装包
+    setTimeout(downloadYs,1000);
+    setTimeout(redirectYunYs,2000);
+    function redirectYunYs() {
+        //跳转到云原神
+         window.location.href = 'https://ys.mihoyo.com/cloud/?utm_source=default#/';
+    }
+    function downloadYs() {
+        //下载原神安装包
+        window.location.href = 'https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_default';
+    }
+</script>
+</body>
+</html>
